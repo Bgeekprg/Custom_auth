@@ -24,9 +24,8 @@ class AuthController extends Controller
         // $user=DB::table('users')->where(['email'=>$request->email,'password'=>$request->password])->first();
         $email=$request->email;
         $password=$request->password;
-        if(auth()->attempt(['email' => $email, 'password' => $password]))
-        {
-            
+        
+        
         }
         
         
