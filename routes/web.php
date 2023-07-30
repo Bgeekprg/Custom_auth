@@ -24,3 +24,8 @@ Route::get('dashboard',function()
 {
     return view('dashboard');
 });
+Route::get('Logout',function()
+{
+    auth()->logout();
+    return redirect('Login');
+});

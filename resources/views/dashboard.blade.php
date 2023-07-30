@@ -11,7 +11,7 @@
     <br/>
     {{-- {{Auth::logout()}} --}}
     @if (Auth::check())
-    
+    <a href="Logout" class="btn btn-success">Logout</a>
 
     @else
     not logged in    

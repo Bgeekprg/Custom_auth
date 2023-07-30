@@ -24,22 +24,21 @@ class AuthController extends Controller
         // $user=DB::table('users')->where(['email'=>$request->email,'password'=>$request->password])->first();
         $email=$request->email;
         $password=$request->password;
-        auth()->attempt(['email' => $email, 'password' => $password],true);
+        if(auth()->attempt(['email' => $email, 'password' => $password]))
+        {
+            
+        }
         
         
             
            
-            echo "success";
-            return redirect('dashboard');
+            // echo "success";
+            // return redirect('dashboard');
         
-        //  else
-        // {
-        //     // return redirect()->back();
-        //     echo "fail";
-        // }
-        // dd(Auth::user());
-        $name=Auth::user();
-        echo $name->name;
+    
+        // $name=Auth::user();
+        dd(Auth::user());
+        // echo $name->name;
         
         
     }
