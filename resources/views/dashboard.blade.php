@@ -25,9 +25,22 @@
     <a href="Logout" class="btn btn-success float-right">Logout</a>
     @endif
     </div>
+    @php
+       
+        // dd('done');
+    @endphp
+    @foreach (auth()->user()->notifications as $item)
+    <div class="alert-success">
+        {{$item->data['user_name']}}
+        
+    </div>
+    @endforeach
+    @php
+     
+    @endphp
     
+
     
-  
 
 
 </body>

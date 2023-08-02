@@ -23,7 +23,7 @@ Route::post('Post_login',[AuthController::class,'Post_login'])->name('Post_login
 Route::get('dashboard',function()
 {
     return view('dashboard');
-});
+})->name('dashboard');
 Route::get('Logout',function()
 {
     auth()->logout();

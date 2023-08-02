@@ -18,10 +18,13 @@ class EventServiceProvider extends ServiceProvider
         Registered::class => [
             SendEmailVerificationNotification::class,
         ],
+        \App\Events\LoginEvent::class=>[
+            \App\Listeners\LoginListener::class,
+        ]
     ];
 
     /**
-     * Register any events for your application.
+     * Register any Listeners for your application.
      */
     public function boot(): void
     {
